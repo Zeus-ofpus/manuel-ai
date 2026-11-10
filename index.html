@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+  <meta name="theme-color" content="#05060a">
+  <meta name="description" content="Ask anything, free. Manuel AI is Nigeria's own AI chat with live web answers, image creation, voice chat and football match insights. Built for your phone by Emmanuel Olabode.">
+  <meta name="google-site-verification" content="1bDWHYW1ldE0LDOTvI6e5QksHCbuys247h4OHyInMGs" />
+  <link rel="canonical" href="https://manuel-ai.vercel.app/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Manuel AI">
+  <meta property="og:title" content="Manuel AI – Nigeria's Free AI Chat">
+  <meta property="og:description" content="Ask anything, free. Live web answers, images, voice chat and match insights, built for your phone.">
+  <meta property="og:url" content="https://manuel-ai.vercel.app/">
+  <meta property="og:image" content="https://manuel-ai.vercel.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Manuel AI – Nigeria's free AI. Ask anything.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://manuel-ai.vercel.app/og.png">
+  <meta name="twitter:site" content="@manuelsolx">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Manuel AI","alternateName":["MANUEL AI","Manuel AI Nigeria","ManuelAI"],"url":"https://manuel-ai.vercel.app/","applicationCategory":"Chat","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"NGN"},"description":"Free AI chat assistant built in Nigeria with live web search, image creation and voice chat.","creator":{"@type":"Person","name":"Emmanuel Olabode","sameAs":["https://x.com/manuelsolx"]}}</script>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Manuel">
+  <title>Manuel AI – Nigeria's Free AI Chat</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/vendor/hl.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/aurora.css">
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+  <noscript><h1>Manuel AI Nigeria</h1><p>Manuel AI is a free AI chat assistant built in Nigeria by Emmanuel Olabode. It answers questions, searches the web live, creates images and supports voice chat. Turn on JavaScript to use it.</p></noscript>
+  <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i><b class="grain"></b></div>
+  <div class="vsom" id="vsom" role="dialog" aria-label="Welcome to Manuel AI">
+    <div class="vsom-stage" aria-hidden="true">
+      <div class="vsom-zeus" id="vsomZeus"><img src="/zeus.webp" alt="" decoding="async" fetchpriority="high"><i class="vsom-eye e1"></i><i class="vsom-eye e2"></i><i class="vsom-fist"></i><i class="vsom-glow g1"></i><i class="vsom-glow g2"></i><i class="vsom-glow g3"></i><i class="vsom-glow g4"></i><i class="vsom-glow g5"></i></div>
+      <div class="vsom-rain"></div><div class="vsom-mist m1"></div><div class="vsom-mist m2"></div>
+      <canvas class="vsom-bolt" id="vsomBolt"></canvas>
+      <div class="vsom-flash" id="vsomFlash"></div>
+      <div class="vsom-shade"></div>
+    </div>
+    <div class="vsom-inner">
+      <p class="vsom-kicker">MANUEL AI</p>
+      <h1 class="vsom-title">Victory<br>State of Mind</h1>
+      <p class="vsom-mark">V.S.O.M</p>
+      <button class="vsom-btn" id="vsomGo">Enter Manuel <span aria-hidden="true">→</span></button>
+    </div>
+  </div>
+  <script src="/vsom.js"></script>
+  <div class="app">
+    <div class="scrim" id="scrim"></div>
+
+    <aside class="sidebar" id="sidebar" aria-label="Conversations">
+      <div class="side-top">
+        <div class="brand">
+          <div class="brand-text"><span class="wordmark" aria-label="MANUEL">MANUEL</span><span class="ai-tag">AI</span></div>
+          <button class="icon-btn only-mobile" id="closeSidebar" aria-label="Close menu">
+            <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <button class="new-chat" id="newChat">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          New chat
+          <kbd class="only-desktop">⌘K</kbd>
+        </button>
+        <label class="search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4-4"/></svg>
+          <input id="chatSearch" type="search" placeholder="Search chats" autocomplete="off">
+        </label>
+      </div>
+
+      <nav class="history" id="history"></nav>
+
+      <div class="side-bottom">
+        <button class="side-item" id="memoryNav">
+          <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 00-6 6c0 2.4 1.4 3.9 2.4 5 .6.7.6 1.3.6 2h6c0-.7 0-1.3.6-2 1-1.1 2.4-2.6 2.4-5a6 6 0 00-6-6zM9.5 20h5"/></svg>
+          Memory
+        </button>
+        <button class="side-item" id="voiceNav" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><path d="M4 9.5v5h3.5L12 19V5L7.5 9.5H4z"/><path d="M15.5 9a4 4 0 010 6M18 6.5a7.5 7.5 0 010 11"/></svg>
+          <span id="voiceLabel">Read replies aloud: Off</span>
+        </button>
+        <button class="side-item" id="adultNav" aria-pressed="false">
+          <span class="adult-badge">18+</span>
+          <span id="adultLabel">18+ mode: Off</span>
+        </button>
+        <button class="side-item" id="walletNav">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16v10a2 2 0 01-2 2H6a2 2 0 01-2-2V7z"/><path d="M16 7V5a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h8"/></svg>
+          <span id="walletLabel">Set wallet address</span>
+        </button>
+        <button class="side-item" id="accountNav">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.6 4-5.5 7.5-5.5s6.3 1.9 7.5 5.5"/></svg>
+          <span id="accountLabel">Sign up / Sign in</span>
+        </button>
+        <button class="side-item" id="installBtn" hidden>
+          <svg viewBox="0 0 24 24"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
+          Install app
+        </button>
+        <a class="credit" href="https://x.com/manuelsolx" target="_blank" rel="noopener">
+          <span class="credit-dot"></span>
+          <span>Built by <b>Emmanuel Olabode</b></span>
+          <span class="credit-handle">@manuelsolx</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn only-mobile" id="menuToggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h16"/></svg>
+        </button>
+        <div class="title" id="chatTitle">New chat</div>
+        <div class="top-actions">
+          <button class="chip-toggle" id="webToggle" aria-pressed="false" title="Let Manuel search the web">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.5 5.4 3.5 8.5s-1 5.9-3.5 8.5M12 3.5C9.5 6.1 8.5 8.9 8.5 12s1 5.9 3.5 8.5"/></svg>
+            <span>Web</span>
+          </button>
+          <button class="icon-btn only-mobile" id="newChatTop" aria-label="New chat">
+            <svg viewBox="0 0 24 24"><path d="M12 20h8M4 20l1-4L16.5 4.5a2.1 2.1 0 013 3L8 19l-4 1z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <section class="scroller" id="scroller">
+        <div class="welcome" id="welcome">
+          <div class="orb" aria-hidden="true"><span class="orb-core"></span><span class="orb-ring"></span></div>
+          <div class="hello-tag"><span class="live-dot"></span>Cold intelligence · Online</div>
+          <h1>Ask me <span class="grad">anything.</span></h1>
+          <p>I'm Manuel. Sharp answers, live from the web, images, voice and match insights.</p>
+          <div class="starters">
+            <button class="starter" data-prompt="Explain something complicated in simple terms. Pick the topic yourself.">
+              <i class="st-ic">💡</i><b>Explain it simply</b><span>A hard topic, made clear</span>
+            </button>
+            <button class="starter" data-prompt="Help me think through a difficult decision. Ask me what it is first.">
+              <i class="st-ic">🧠</i><b>Think it through</b><span>Get an honest second opinion</span>
+            </button>
+            <button class="starter" data-prompt="Recommend a book I won't regret reading, and tell me why in three lines.">
+              <i class="st-ic">📚</i><b>Recommend a book</b><span>Something actually worth it</span>
+            </button>
+            <button class="starter" data-prompt="Roast my plans for today. Ask me what they are.">
+              <i class="st-ic">🔥</i><b>Roast my day</b><span>Playful, not cruel</span>
+            </button>
+            <button class="starter" data-prompt="Check my wallet and tell me if I can mint AGC today — balance, quota, AGC per share, and what it would cost.">
+              <i class="st-ic">💰</i><b>Wallet &amp; AGC mint</b><span>Balance, quota and cost, live</span>
+            </button>
+            <button class="starter" data-prompt="Create an image of a futuristic Lagos skyline at night, neon lights over the lagoon">
+              <i class="st-ic">🎨</i><b>Create an image</b><span>Describe it, Manuel draws it</span>
+            </button>
+          </div>
+          <a class="welcome-credit" href="https://x.com/manuelsolx" target="_blank" rel="noopener">Built by Emmanuel Olabode · @manuelsolx</a>
+        </div>
+        <div class="thread" id="thread" aria-live="polite"></div>
+      </section>
+
+      <div class="composer-zone">
+        <div class="attachment" id="attachment" hidden></div>
+        <form class="composer" id="composer">
+          <input id="imageInput" type="file" accept="image/png,image/jpeg,image/webp,image/gif" hidden>
+          <button type="button" class="icon-btn attach" id="attachBtn" aria-label="Attach an image" title="Attach an image">
+            <svg viewBox="0 0 24 24"><path d="M20 11.5l-7.8 7.8a5 5 0 01-7.1-7.1l8.5-8.5a3.3 3.3 0 014.7 4.7l-8.5 8.5a1.7 1.7 0 01-2.4-2.4l7.8-7.8"/></svg>
+          </button>
+          <textarea id="input" rows="1" placeholder="Message Manuel" maxlength="8000" enterkeyhint="send"></textarea>
+          <button type="button" class="icon-btn mic" id="micBtn" aria-label="Speak" title="Speak">
+            <svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0013 0M12 17.5V21"/></svg>
+          </button>
+          <button type="submit" class="send" id="sendBtn" aria-label="Send" disabled>
+            <svg viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5L12 5l6.5 6.5"/></svg>
+          </button>
+        </form>
+        <div class="fineprint">Manuel can make mistakes. Check what matters.</div>
+      </div>
+    </main>
+  </div>
+
+  <div class="sheet" id="memorySheet" aria-hidden="true">
+    <div class="sheet-card" role="dialog" aria-labelledby="memTitle">
+      <div class="sheet-head">
+        <div><small>PERSONAL CONTEXT</small><h2 id="memTitle">Memory</h2></div>
+        <button class="icon-btn" id="closeMemory" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <p id="memoryHint">Manuel picks up facts about you as you chat and remembers them in every new chat. Edit or clear them anytime. Stored on this device. Sign up to keep them across devices.</p>
+      <textarea id="memoryInput" placeholder="- Name is…&#10;- Studies…&#10;- Likes answers that…"></textarea>
+      <label class="switch-row"><input type="checkbox" id="autoMemory" checked> <span>Learn from my chats automatically</span></label>
+      <button class="primary" id="saveMemory">Save memory</button>
+    </div>
+  </div>
+
+  <div class="sheet" id="authSheet" aria-hidden="true">
+    <div class="sheet-card" role="dialog" aria-labelledby="authTitle">
+      <div class="sheet-head">
+        <div><small>YOUR ACCOUNT</small><h2 id="authTitle">Create your account</h2></div>
+        <button class="icon-btn" id="closeAuth" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <div id="authForms">
+        <div class="tabs" role="tablist">
+          <button type="button" class="tab active" data-mode="signup">Sign up</button>
+          <button type="button" class="tab" data-mode="signin">Sign in</button>
+        </div>
+        <p id="authBlurb">So Manuel remembers you on every device.</p>
+        <form id="authForm" class="auth-form" autocomplete="on">
+          <input id="authName" name="name" type="text" placeholder="Your name" autocomplete="name" maxlength="60">
+          <input id="authEmail" name="email" type="email" placeholder="Email" autocomplete="email" required>
+          <input id="authPassword" name="password" type="password" placeholder="Password (8+ characters)" autocomplete="new-password" minlength="8" required>
+          <div class="auth-error" id="authError" role="alert"></div>
+          <button class="primary" id="authSubmit" type="submit">Create account</button>
+        </form>
+      </div>
+      <div id="authSignedIn" hidden>
+        <p>Signed in as <b id="authWho"></b>. Your memory syncs to every device you sign in on.</p>
+        <button class="primary ghost" id="signOut" type="button">Sign out</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="/vendor/marked.min.js"></script>
+  <script src="/vendor/purify.min.js"></script>
+  <script src="/vendor/highlight.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
